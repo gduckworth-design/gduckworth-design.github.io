@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {margin:0;}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: auto;
+  width: 100%;
+}
+
+li {
+  float: left;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: green;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* Create three columns/boxes that float next to each other */
+  article {
+  float: left;
+  padding: 0px;
+  width: 100%;
+  margin-left:0px;
+  background-color: #83CBEB;
+  height: auto; 
+}
+  art ul {
+  list-style-type: none;
+  padding: 5;
+}
+art {
+  float: left;
+  padding: 0px;
+  width: 0%;
+  background-color: #83CBEB;
+  height: auto; 
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav {
+  float: left;
+  width: 0%;
+  height: auto; 
+  background: #83CBEB;
+  padding: 0px;
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+foot {
+  float: left;
+  width: 100%;
+  height: auto; 
+  background: #83CBEB;
+  padding: 0px;
+}
+
+
+/* Responsive layout - makes the three columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  article, art, nav {
+    width: 100%;
+    height: auto;
+  }
+
+img {
+  width: auto ;
+  max-width: 100% ;
+  height: auto ;
+} 
+}
+
+</style>
+</head>
+<body>
+  <div>
+    <article>
+    <p style="color:#83CBEB;">----------<img src="header.png" alt=" " style="width:1200px;height:310px;"></p>
+
+  </article>
+</div>
+<art>
+<div1>
+<p> </p>
+</div1>
+</art>
+<div2>
+<nav>
+    
+   <p>  
+ </p>
+  </nav>
+</div2>
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#about">About</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Safety</a>
+    <div3 class="dropdown-content">
+      <a href="video.htm">Safety in Design</a>
+      <a href="#">Hazardous Area Classification</a>
+      <a href="#">HAZID facilitation</a>
+      <a href="#">Risk Assessment facilitation</a>
+      <a href="BHP.pdf">HAZOP facilitation</a>
+    </div3>   
+  </li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Equipment Design</a>
+    <div4 class="dropdown-content">
+      <a href="Oil.htm">Oil & Gas</a>
+      <a href="Chemical.htm">Chemicals</a>
+      <a href="fert.htm">Fertilizers</a>
+      <a href="Mining.htm">Minerals & Metals</a>
+      <a href="#">Environmental</a>
+    </div4>   
+  </li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  </ul>
+<div5>
+ <article>
+    <p><img src="footer.png" alt=" " style="width:1200px;height:180px;"></p>
+
+  </article>
+</div5>
+
+</style>
+
+</head>
+
+</body>
+</html>
+
