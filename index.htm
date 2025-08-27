@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Home</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-color:#83CBEB;">
 <style>
-* {
-  box-sizing: border-box;
+h1 {
+  text-align: center;
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+div{
+margin: 70px;
 }
-
-body {margin:0;}
-
 ul {
   list-style-type: none;
   margin: 0;
@@ -66,91 +65,22 @@ li.dropdown {
   display: block;
 }
 
-
-/* Create three columns/boxes that float next to each other */
-  article {
-  float: left;
-  padding: 0px;
-  width: 100%;
-  margin-left:0px;
-  background-color: #83CBEB;
-  height: auto; 
+div {
+  display: flex;
+  justify-content: center;
 }
-  art ul {
-  list-style-type: none;
-  padding: 5;
-}
-art {
-  float: left;
-  padding: 0px;
-  width: 0%;
-  background-color: #83CBEB;
-  height: auto; 
-}
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav {
-  float: left;
-  width: 0%;
-  height: auto; 
-  background: #83CBEB;
-  padding: 0px;
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-foot {
-  float: left;
-  width: 100%;
-  height: auto; 
-  background: #83CBEB;
-  padding: 0px;
-}
-
-
-/* Responsive layout - makes the three columns/boxes stack on top of each other instead of next to each other, on small screens */
 @media (max-width: 600px) {
-  article, art, nav {
-    width: 100%;
-    height: auto;
-  }
-
 img {
-  width: auto ;
-  max-width: 100% ;
+  width: 100% ;
   height: auto ;
 } 
 }
-
 </style>
 </head>
 <body>
-  <div>
-    <article>
-    <p style="color:#83CBEB;">----------<img src="header.png" alt=" " style="width:1200px;height:310px;"></p>
 
-  </article>
-</div>
-<art>
-<div1>
-<p> </p>
-</div1>
-</art>
-<div2>
-<nav>
-    
-   <p>  
- </p>
-  </nav>
-</div2>
+<p style="color:#83CBEB;">----------<img src="header.png" alt=" " style="width:1200px;height:310px;"></p>
+
 <ul>
   <li><a class="active" href="#home">Home</a></li>
   <li><a href="about.htm">About</a></li>
@@ -167,22 +97,18 @@ img {
   <li class="dropdown">
     <a href="javascript:void(0)" class="dropbtn">Equipment Design</a>
     <div4 class="dropdown-content">
-      <a href="Oil.htm">Oil & Gas</a>
-      <a href="Chemical.htm">Chemicals</a>
-      <a href="fert.htm">Fertilizers</a>
-      <a href="Mining.htm">Minerals & Metals</a>
+      <a href="#">Oil & Gas</a>
+      <a href="#">Chemicals</a>
+      <a href="#">Fertilizers</a>
+      <a href="#">Minerals & Metals</a>
       <a href="#">Environmental</a>
     </div4>   
   </li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
+  <li><a href="publications.htm">Publications</a></li>
+  <li><a href="contact.htm">Contact</a></li>
   </ul>
-<div5>
- <article>
-    <p><img src="footer.png" alt=" " style="width:1200px;height:180px;"></p>
 
-  </article>
-</div5>
+    <p><img src="footer.png" alt=" " style="width:1200px;height:180px;"></p>
 
 </style>
 
