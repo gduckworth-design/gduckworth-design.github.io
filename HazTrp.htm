@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Some Hazop Issues</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body style="background-color:#83CBEB;">
+<style>
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link and background color on hover */
+li a:hover {
+  background-color: #555555;
+  color: white;
+}
+html {
+  scroll-behavior: smooth;
+}
+#Doub {
+  height: 800px;
+  background-color: #83CBEB;
+}
+
+#Dimen {
+  height: 1000px;
+  background-color: #83CBEB;
+}
+
+#Chaz1 {
+  height: 600px;
+  background-color: #83CBEB;
+}
+
+#Chaz2 {
+  height: 1000px;
+  background-color: #83CBEB;
+}
+
+#Vend {
+  height: 1200px;
+  background-color: #83CBEB;
+}
+#Mode {
+  height: 1000px;
+  background-color: #83CBEB;
+}
+</style>
+</head>
+<body>
+<div>
+<h1><img src="RT.png" alt=" "style="float:left;width:55px;height:55px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SOME HAZOP ISSUES</h1><br>
+<p>Sometimes even experienced Hazop teams miss hazards that should have been obvious and readily picked up.
+Following are some examples to be aware of:</p>
+<div class="main" id="Cont">
+<a href="#Cont"></a>
+<h2>SECTION CONTENTS</h2>
+<ul>
+<li><a href="#Doub"><b>Double Jeopardy</a></li>
+<li><a href="#Dimen">P&IDs are not Dimensioned Drawings</a></li>
+<li><a href="#Chaz1">Control System Hidden Measured Variable - Programmed</a></li>
+<li><a href="#Chaz2">Combined Batch Cycle and Continuous Operation - Interference</a></li>
+<li><a href="#Vend">Vendor Recommendation Ignored</a></li>
+<li><a href="#Mode">Changes in Operating Mode</a></b></li>
+</div>
+<div class="main" id="Doub">
+  <h2>Double Jeopardy</h2>
+<p>Probably one of the most contentious issues in the conduct of a Hazop is the concept of "Double Jeopardy".
+Double Jeopardy normally refers to a scenario where multiple independent failures occur at the same time.
+Double Jeopardy is invoked under these circumstances so that the Hazop team can limit their investigations to scenarios that are reasonably likely to occur in practice. Key points to consider are:</p>
+<ul>
+<li><b> . Double Jeopardy applies only to independent failures that are not related by a common cause</li>
+<li> . Latent failures (i.e. undetected failures) that contribute to another failure are not Double Jeopardy</li>
+<li> . Failure of a safeguard is not considered to be Double Jeopardy</li>
+<li> . Human intervention, operational changes, maintenance activities resulting in the risk of simultaneous failures are not considered to be Double Jeopardy</li></b>
+</ul>
+<p>It is recommended that Double Jeopardy scenarios always be investigated on a case by case basis, considering the consequences that may be involved rather than routinely dismissing them.</p>
+<p>The following example shows how confusing evaluation of double Jeopardy situations can lead to serious hazards. In the example shown below carbon soot and entrained hydrogen gas is discharged from a reactor into a carbon drop vessel on a batch basis. At the completion of the drop, the valve to the reactor is closed and a nitrogen purge valve opens, purging hydrogen from the drop vessel to a flare header. At the completion of the nitrogen purge step, the valve to flare is closed and a valve to a carbon hopper is opened, nitrogen is then used to pneumatically convey the carbon to the carbon hopper. The carbon hopper then feeds a carbon sizing circuit to remove carbon fines, and return correctly sized carbon to the reactor. The first step is a mechanical sizer which is fed through a rotary valve. This operation is open to air and is the first time the purged carbon comes into contact with oxygen. On one occasion during commissioning, despite the fact that the purge step operated, the purge failed to remove the contained hydrogen. The hydrogen was then conveyed to the mechanical sizing step along with the carbon, and when it contacted oxygen the hydrogen gas mixture exploded (probably initiated by the mechanical sizer). Fortunately no one was injured, but significant damage was done to the mechanical sizer.</p>
+<p>The Hazop had explicitly assumed that if the purge step operated then the hydrogen would be removed. The system would not allow a transfer if the purge step had not occurred, but even if the purge step occured, there was no separate method of checking  whether the purge of hydrogen had actually been achieved. Failure of the purge to be effective was considered to be a Double Jeopardy situation. But in reality this was a latent failure of the purge step and should not have been considered to be Double Jeopardy</p>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="fsht.jpg" alt=" " style="width:500px;height:300px;"><br>
+<a href="#Cont">Back to Contents</a>
+</div>
+
+<div class="main" id="Dimen">
+  <h2>P&IDs are Not Dimensioned Drawings</h2>
+<p>In the conduct of a Hazop, it is important to remember that P&IDs are not dimensioned drawings. The spatial relationship of items, the sizes of equipment shown and the length of lines bear no relation to the actual dimensions and distances. A humerous example of failing to recognise this is shown in the following P&ID section and photograph. The P&ID can be considered to show the manual water isolation valves to a vibrating screen as positioned in the centre of the screen. This project was a fast track construction, with small bore piping constructed from the P&IDs not piping isometrics, and that is exactly how the position of the valves was interpreted by the SMP contractor-located in an inaccessible location in the centre of the screen! This is somewhat trivial, as the error was immediately identified during punch listing prior to commissioning and corrected.</p>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="screen.jpg" alt=" " style="width:500px;height:300px;"><br>
+<p>However the following example shows a similar error with potentially much more serious consequence. In this example a gas containing hydrogen cyanide and hydrogen was passing through two caustic soda absorbers in series. After absorption the hydrogen rich gas was compressed, dried and recycled to the reactors. A pressure control valve located after the second absorber was used to vent excess gas to an onsite boiler and/or the flare system.
+The pressure measurement instrument was located at the absorber, but there was 30 - 40 m of piping together with valves and fittings from this point to the recycle compressors which were located at ground level. The total pressure was being controlled to a relatively low pressure of 2 bg. To the Hazop team the length of piping between the pressure measurement point and the compressor intake appeared negligible and was not considered an issue. However, during commissioning it was found that the pressure drop between the pressure measurement point and the compressor suction was sufficient to drop the pressure at the compressor suction below atmospheric, introducing the risk that oxygen could be drawn into and mixed with hydrogen gas at the compressors creating the potential for an explosion. The problem was resolved by relocating the pressure measurement point to the compressor suction intake. This example highlights the importance of noting critical distances on P&IDs, and being aware that it is important to consult plant layout drawings, piping isometrics to be aware of actual piping distances and resistances.</p>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="ptloc.jpg" alt=" " style="width:500px;height:300px;"><br>
+  <a href="#Cont">Back to Contents</a>
+</div>
+
+<div class="main" id="Chaz1">
+  <h2>Control System Hidden Measured Variable - Programmed</h2>
+<p>Control system programming can contribute to operational problems in a number of ways. Following  is an example of the way control system configuration and programming created a problem by inadvertently hiding the real time variations in a controlled variable from the operators that was not picked up in a CHAZOP.</p>
+<p>A refinery deaerator was providing deaerated boiler feed water to a fired boiler. The BFW pumps had a history of severe cavitation damage to the impellors and the refinery suspected that this was the result of inadequate oxygen removal in the deaerator. The deaerator was accepting makeup demineralised water and condensate return and stripping oxygen from the feed water with saturated steam supplied at 350 kpag and decreased to 103 kPag across the control valve. In practice the actual steam supply pressure was highly variable, the local pressure gauge at the deaerator showing variations in the controlled pressure ranging from 40 - 160% over periods of 30 minutes. Hydraulic calculations confirmed that at the low pressure points the pressure at the inlet to the BFW pumps was less than the pump NPSHR and was quite likely causing cavitation damage to the pump impellors. The question was, "why was this cause not recognised by the operators?" It turned out that the highly variable nature of the steam supply pressure had been recognised by the refinery control group and they had attempted to stabilise the deaerator performance by smoothing/dampening the pressure signal. But unfortunately they smoothed the signal into the pressure controller rather than the control response out. The result of this was that the operators only saw the smoothed pressure signal and had no idea that the extreme variations were occurring!</p><br>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="deaerator.jpg" alt=" " style="width:500px;height:300px;"><br>
+
+  <a href="#Cont">Back to Contents</a>
+</div>
+
+
+<div class="main" id="Chaz2">
+  <h2>Combined Batch Cycle and Continuous Operation - Interference</h2>
+<p>Most process engineers will be aware that the protection of piping, valves and other system components, requires that the plant needs to be designed to dampen the pulsations caused by reciprocating positive displacement pumps and compressors. However this is not the only source of pressure pulsations which can often occur when a batch sequence is connected to a continuous operation. The following example illustrates the significant impact that this type of problem can have when it is not identified during the Hazop.</p>
+<p>In one version of the modern ammonia process, Pressure Swing Absorption (PSA) is used to separate hydrogen from carbon monoxide/dioxide, nitrogen and hydrocarbons, and the purified hydrogen stream is then mixed with pure nitrogen obtained from a cryogenic air separation unit (ASU) to give an inert-free ammonia synthesis gas. The PSA system uses automatic switching between nine absorber vessels each filled with absorbent. The PSA absorbs impurities at high pressure, while desorption and regeneration takes place at low pressure. Purified hydrogen leaves the system at 21 b and is mixed with the required nitrogen to make the inert free ammonia synthesis gas. The cycling of the valves on each of the absorber vessels as they go through their absorption cycle results in a pressure pulse in the mixed synthesis gas to the feed of the syngas compressor which is a multistage high speed, high pressure centrifugal unit. The Syngas compressor is protected by a sophisticated integrated turbine/surge control PLC. Unfortunately the PLC control system interpreted the pressure pulses as an indication that the Syngas compressor was going into surge. The solution was ultimately to install an inline pressure vessel with sufficient volume capacity to smooth out the pressure pulsations, but this was a major modification that required a time delay of ~ 12 months, and during this time the ammonia plant had to be run with the anti-surge bypass open, reducing plant capacity to 80% of nameplate.</p>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="hydpsa.jpg" alt=" " style="width:800px;height:400px;"><br>
+<img src="spacer.jpg" alt=" " style="width:100px;height:300px;"><img src="psasyn.jpg" alt=" " style="width:1000px;height:300px;"><br>
+
+
+  <a href="#Cont">Back to Contents</a>
+</div>
+
+<div class="main" id="Vend">
+  <h2>Vendor Recommendation Ignored</h2>
+<p>When vendor packaged plant is included in a design (viz multiple equipment items and interconnecting piping, valves, instrumentation and electrics) it is common practice to conduct a separate Hazop of this plant in the presence of vendor representatives. If only single major equipment items are involved, and ancillary equipment is separately selected and designed by the design team, then these will be reviewed as part of the plant Hazop by the Hazop team, often without the vendors participation. The disadvantage of this approach is that the vendors knowledge and experience is not included in the Hazop and this can result in hazards not being identified. The following example is a case where serious problems resulted from this approach.</p>
+<p>The example refers to the crystallization and drying of sodium cyanide. In this plant sodium cyanide was crystallized in an evaporative crystallizer, separated from the mother liquor in a pusher centrifuge, and dried in a turbo-tray drier. Exhaust gas from the dryer was sent to a gas scrubber to remove cyanide fumes and fine particulates. There were two crystallizers, two centrifuges and two dryers in parallel but the dryer exhaust gas was directed to a single off gas scrubber, which also accepted vent gas from the adjacent solids packaging plant, and was located on the floor above the dryers. This was done to minimise the space and cost required for the facility.  The vendors standard approach was to scrub the drier off gas in separate dedicated venturi scrubbers located on the same level as the dryers. During commissioning it was found that moisture from the hot moist gas was precipitating on the cold pipework which was then running backwards on the pipe walls into the top of the dryers. If one of the dryers was shutdown, this resulted in partial dissolution and set-up of the crystals on the dryer trays, resulting in blockages and serious damage to the dryer drive shaft. In addition workers had to be sent into the dryers to jackhammer out the solidified cyanide.</p>
+<p>The following P&IDs show the arrangement with the vendors standard recommendation, and the final design that was actually adopted</p>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="vendrec.jpg" alt=" " style="width:800px;height:400px;"><br>
+<img src="spacer.jpg" alt=" " style="width:300px;height:300px;"><img src="actdesign.jpg" alt=" " style="width:800px;height:400px;"><br>
+  <a href="#Cont">Back to Contents</a>
+</div>
+
+<div class="main" id="Mode">
+  <h2>Intermittent Changes in Operating Mode</h2>
+<p>A common feature of many chemical processes is a dual operating mode. This is often found in catalytic processes which run on a semi-continuous basis, i.e. the process streams are continuous, but the catalyst is present in fixed beds in which the catalyst activity declines over time. This results in a periodic need to shut the process plant down and either replace the catalyst with fresh active catalyst, or regenerate the existing catalyst in situ. The latter operation may involve operating the plant for an extended period in a mode that is unrelated to its normal operating mode. it is important that careful evaluation of both modes during a Hazop is undertaken to identify hazards that may result from this changed mode operation. Following is an example of where the hazards introduced can lead to serious consequences.</p>
+<p>A refinery operated two catalytic reforming units, located next to each other on the site. Both were regenerative, fixed bed catalytic reforming units treating straight run naphthas to produce high octane motor fuel blending components. The two units were of different designs, but the same capacity. Unit 1 was a 14000 BPSD UOP Platformer, Unit 2 was a 14000 BPSD CRC Rheniformer. Both units consisted of two parts, a feed pre-treatment naphtha hydrotreater and a catalytic reformer. The hydrotreater removed feed components that would deactivate and poison the reformer catalyst (nitrogen, sulphur, oxygen, arsenic and lead) by treating the feed over a catalyst with hydrogen gas recycled from the reforming section. The amount of hydrogen gas available varied depending on the state of the reformer catalyst, and to provide operating flexibility hydrogen rich gas was distributed between the two hydrotreaters by an underground pipeline between the two units. Over time the reformer catalyst becomes deactivated by the deposition of carbon soot on the catalyst surface and every 1 to 2 years the unit is shut down to regenerate the catalyst. This is done by circulating an oxygen rich stream over the catalyst while it is being heated. The oxygen results in burning the carbon to CO2 which is then vented.  On one occasion one unit was shutdown and undergoing catalyst regeneration, while the other unit was operating at full capacity in reforming mode. The hydrogen transfer was not being used, but an unidentified event enabled oxygen to mix with hydrogen in the line and initiate an explosion. The underground pipeline was blown out of the ground over a length of 30 - 40 m, but fortunately there were no injuries and no further serious damage. However given the circumstances this event could have initiated a devastating explosion and fire at the refinery.</p>
+<img src="spacer.jpg" alt=" " style="width:100px;height:300px;"><img src="Hydexp.jpg" alt=" " style="width:1000px;height:300px;"><br>
+
+  <a href="#Cont">Back to Contents</a>
+</div>
+
+</body>
+</html>
+
